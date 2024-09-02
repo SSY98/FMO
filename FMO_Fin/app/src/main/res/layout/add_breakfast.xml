@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addBreakfast_Activity">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fonta"
+            android:paddingLeft="15dp"
+            android:paddingTop="50dp"
+            android:text="아침 식단 추가!"
+            android:textColor="#000"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/b_btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="#28B2EBF4"
+            android:fontFamily="@font/fonta"
+            android:text="확인"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/eat_breakfast"
+            android:fontFamily="@font/fonta"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="아침식단을 입력해주세요."
+            android:paddingLeft="15dp"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/minus_b"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="-"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:backgroundTint="#A2D2FF" />
+        <EditText
+            android:id="@+id/gram_b"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fonta"
+            android:gravity="center"
+            android:text="100g"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/plus_b"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="+"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:backgroundTint="#A2D2FF" />
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fonta"
+        android:drawableLeft="@drawable/ic_plus"
+        android:layout_gravity="center"
+        android:text="  식단 추가하기"
+        android:textColor="@android:color/black"
+        android:background="#00FFFFFF"
+        android:paddingTop="20dp"
+        android:id="@+id/add_breakfast" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/left_kcal_b"
+            android:fontFamily="@font/fonta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="아침 전체 칼로리 합: " />
+        <TextView
+            android:id="@+id/sum_kcal_b"
+            android:fontFamily="@font/fonta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/left_kcal_b"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/fonta"
+            android:text="kcal"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/sum_kcal_b" />
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/fonta"
+            android:text="삭제하기"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fonta"
+        android:text="아침식사는 하셔야죠!"
+        android:layout_gravity="center"
+        android:id="@+id/tv1"
+        android:layout_margin="50dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#28B2EBF4"
+        android:fontFamily="@font/fonta"
+        android:id="@+id/listView_b" />
+
+
+</LinearLayout>

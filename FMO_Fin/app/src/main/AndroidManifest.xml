@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fmo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_cp"
+        android:label="식단관리사무소"
+        android:roundIcon="@drawable/ic_launcher_cp"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FMO"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Alarm_Activity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".addBreakfast_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".addLunch_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".addDinner_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Change_Information"
+            android:exported="true" />
+        <activity
+            android:name=".Physical_Information"
+            android:exported="true" />
+        <activity
+            android:name=".Register_Information"
+            android:exported="true" />
+        <activity
+            android:name=".TIP_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Setting_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Tester_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

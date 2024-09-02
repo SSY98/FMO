@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFAB73">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/square_round"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TIP 사이트!"
+                android:textSize="35dp"
+                android:fontFamily="@font/fonta"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/site2"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/fonta"
+                android:text="식단관리의 정석"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:backgroundTint="@color/material_on_primary_disabled"
+                />
+
+            <Button
+                android:id="@+id/site1"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/fonta"
+                android:text="영양사가 추천하는 다이어트 추천 식단!"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:backgroundTint="@color/material_on_primary_disabled"
+                />
+
+            <Button
+                android:id="@+id/site3"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/fonta"
+                android:text="건강한 다이어트 식단 짜기"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:backgroundTint="@color/material_on_primary_disabled"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/fonta"
+                        android:text="남자\n식단관리 "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:backgroundTint="@color/material_on_primary_disabled" />
+
+                    <ImageView
+                        android:id="@+id/mid"
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/man"
+                        android:src="@drawable/line_sample" />
+
+                    <Button
+                        android:id="@+id/woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/mid"
+                        android:fontFamily="@font/fonta"
+                        android:text="여자\n식단관리 "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:backgroundTint="@color/material_on_primary_disabled" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/line_sample"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.45"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="유튜브!"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/fonta"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include"
+                app:layout_constraintVertical_bias="0.500" />
+
+            <Button
+                android:id="@+id/you1"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="유튜브 식단관리 검색"
+                android:fontFamily="@font/fonta"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:backgroundTint="@color/material_on_primary_disabled"
+                tools:layout_editor_absoluteY="430dp"/>
+
+            <Button
+                android:id="@+id/you2"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="식단 짜는 방법"
+                android:fontFamily="@font/fonta"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:backgroundTint="@color/material_on_primary_disabled"
+                tools:layout_editor_absoluteY="430dp"/>
+
+
+            <Button
+                android:id="@+id/you3"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="식단 관리 동기부여 영상"
+                android:fontFamily="@font/fonta"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:backgroundTint="@color/material_on_primary_disabled"
+                tools:layout_editor_absoluteY="430dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

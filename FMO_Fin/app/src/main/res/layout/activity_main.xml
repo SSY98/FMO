@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fmo.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFAB73">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFAB73">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/btn_navi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_menu_24" />
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/fonta"
+                        android:text="식단 관리사무소"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_round_main"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/oneb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/chart_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:id="@+id/식단"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/square_round">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round">
+
+                                            <Button
+                                                android:id="@+id/breakfast"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/square_round" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="center_horizontal"
+                                                android:paddingBottom="10dp"
+                                                android:text="아침"
+                                                android:textColor="@color/black"
+                                                android:textSize="17dp"
+                                                android:textStyle="bold" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="60dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:gravity="center"
+                                                    android:text="아침식단 : "
+                                                    android:textColor="@color/black" />
+
+                                                <TextView
+                                                    android:id="@+id/breakfast_main"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:textColor="@color/black" />
+                                                //아침식단 표시
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:gravity="center"
+                                                    android:text="총 칼로리 : "
+                                                    android:textColor="@color/black" />
+
+                                                <TextView
+                                                    android:id="@+id/breakfast_kcal_main"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:textColor="@color/black" />
+                                                //칼로리 표시
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:text="kcal"
+                                                    android:textColor="@color/black" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/square_round">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round">
+
+                                            <Button
+                                                android:id="@+id/lunch"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/square_round"></Button>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="center_horizontal"
+                                                android:paddingBottom="10dp"
+                                                android:text="점심"
+                                                android:textColor="@color/black"
+                                                android:textSize="18dp"
+                                                android:textStyle="bold" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:gravity="center"
+                                                    android:text="점심식단 : "
+                                                    android:textColor="@color/black" />
+
+                                                <TextView
+                                                    android:id="@+id/lunch_main"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:textColor="@color/black" />
+                                                //점심식단 표시
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:gravity="center"
+                                                    android:text="총 칼로리 : "
+                                                    android:textColor="@color/black" />
+
+                                                <TextView
+                                                    android:id="@+id/lunch_kcal_main"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:textColor="@color/black" />
+                                                //칼로리 표시
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:text="kcal"
+                                                    android:textColor="@color/black" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/square_round">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round">
+
+                                            <Button
+                                                android:id="@+id/dinner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/square_round" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="center_horizontal"
+                                                android:paddingBottom="10dp"
+                                                android:text="저녁"
+                                                android:textColor="@color/black"
+                                                android:textSize="18dp"
+                                                android:textStyle="bold" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:gravity="center"
+                                                    android:text="저녁식단 : "
+                                                    android:textColor="@color/black" />
+
+                                                <TextView
+                                                    android:id="@+id/dinner_main"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:textColor="@color/black" />
+                                                //저녁식단 표시
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:gravity="center"
+                                                    android:text="총 칼로리 : "
+                                                    android:textColor="@color/black" />
+
+                                                <TextView
+                                                    android:id="@+id/diner_kcal_main"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:textColor="@color/black" />
+                                                //칼로리 표시
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/fonta"
+                                                    android:text="kcal"
+                                                    android:textColor="@color/black" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/신체정보"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/square_round">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <Button
+                                            android:id="@+id/btnInformation"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/square_round" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/square_round"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/fonta"
+                                            android:gravity="center_horizontal"
+                                            android:paddingBottom="15dp"
+                                            android:text="신체정보"
+                                            android:textColor="@color/black"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="나이"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/age_main"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:layout_weight="1"
+                                                android:text="성별"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/gender_main"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.66"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="키"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/height_main"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:layout_weight="1"
+                                                android:text="cm"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.66"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="체중"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/weight_main"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:layout_weight="1"
+                                                android:text="kg"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="목표"
+                                                android:layout_weight="1"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/goal_main"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.66"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="목표체중"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/goalweight_main"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:text="kg"
+                                                android:layout_weight="1"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:layout_weight="1"
+                                                android:text="BMI"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/bmi"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:text=""
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="BMI 결과"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/result"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/fonta"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:gravity="right"
+                                                android:layout_marginRight="15dp"
+                                                android:text="권장칼로리"
+                                                android:layout_weight="0.6"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:id="@+id/goal_kcal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:fontFamily="@font/fonta"
+                                                android:layout_weight="0.8"
+                                                android:textColor="@color/black" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/fonta"
+                                                android:layout_weight="1"
+                                                android:text="kcal"
+                                                android:textColor="@color/black" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/chart_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_margin="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="@drawable/square_round">
+
+                    //그래프
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart"
+                        android:layout_width="match_parent"
+                        android:layout_margin="13dp"
+                        android:layout_height="match_parent" />
+                    //그래프끝
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/naviView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fontFamily="@font/fonta"
+        app:menu="@menu/navi_menu"
+        app:headerLayout="@layout/header"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

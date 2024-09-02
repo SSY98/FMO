@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/tip"
+            android:icon="@drawable/ic_baseline_video_library_24"
+            android:title="식단관리 TIP" />
+
+        <item android:id="@+id/alarm"
+            android:icon="@drawable/ic_baseline_alarm_24"
+            android:title="알림" />
+
+        <item android:id="@+id/setting"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="초기화" />
+
+        <item android:id="@+id/tester"
+            android:icon="@drawable/ic_baseline_architecture_24"
+            android:title="실험실" />
+
+    </group>
+</menu>
